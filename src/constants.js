@@ -4,9 +4,10 @@ const transformCharacterData = (characterData) => {
 	return {
 		name: characterData.name,
 		imageURI: characterData.imageURI,
+		gender: characterData.gender,
 		hp: characterData.hp.toNumber(),
 		maxHp: characterData.maxHp.toNumber(),
-		attackDamage: characterData.attackDamage.toNumber(),
+		level: characterData.level.toNumber(),
 	};
 };
 
