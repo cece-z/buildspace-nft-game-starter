@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import twitterLogo from './assets/twitter-logo.svg';
 import SelectCharacter from './Components/SelectCharacter';
+import Arena from './Components/Arena';
 import { CONTRACT_ADDRESS, transformCharacterData } from './constants';
 import myNftGame from './utils/MyNftGame.json';
 import { ethers } from 'ethers';
@@ -135,6 +136,8 @@ const App = () => {
 			 */
 		} else if (currentAccount && !characterNFT) {
 			return <SelectCharacter setCharacterNFT={setCharacterNFT} />;
+		} else if (currentAccount && characterNFT) {
+			return <Arena characterNFT={characterNFT} setCharacterNFT={setCharacterNFT} />;
 		}
 	};
 
